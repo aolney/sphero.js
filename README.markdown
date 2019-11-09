@@ -1,3 +1,32 @@
+The purpose of this fork is to update dependencies rather than add new functionality.
+
+Currently working for:
+
+- Ubuntu 18.04
+- Node 10
+
+Helpful tips before using or running tests:
+
+- Add yourself to the `dialout` group and **reboot**
+
+`sudo usermod -a -G dialout $USER`
+
+- Pair the Sphero with bluetooth using bluetooth manager, then:
+    - `bluetoothctl`
+    - `power on`
+    - `agent on`
+    - `default-agent`
+    - `scan on`
+    - Get the MAC address matching your Sphero
+    - `pair <your MAC address>` -- should not be needed if you properly paired, but just in case
+    - `quit`
+    - `rfcomm bind /dev/rfcomm0 <your MAC address>` -- you will need to do this after every boot
+    - `ls -al /dev/rfcomm0` -- should have group owner dialout
+
+**Tests currently breaking/stalling, possibly b/c multiple serialport objects are being created without properly closing down old ones**
+
+----------------------------
+
 # Sphero.js
 
 The official Orbotix JavaScript SDK module to programmatically control Sphero robots.

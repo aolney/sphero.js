@@ -1,6 +1,6 @@
 {
   "name": "sphero",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "main": "index.js",
   "description": "Sphero.js - The Official Orbotix JavaScript SDK to control Sphero robots",
   "homepage": "http://www.sphero.com/",
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/orbotix/sphero.js"
   },
+  "private": true,
   "license": "MIT",
   "keywords": [
     "robot",
@@ -26,17 +27,19 @@
     "sprk"
   ],
   "devDependencies": {
-    "browserify": "10.2.3",
+    "browserify": "^16.5.0",
     "chai": "2.3.0",
-    "eslint": "0.22.1",
-    "grunt": "0.4.5",
-    "mocha": "2.2.5",
+    "eslint": "^6.6.0",
+    "grunt": "^1.0.4",
+    "mocha": "^6.2.2",
     "sinon": "1.14.1",
     "sinon-chai": "2.7.0",
-    "uglify-js": "2.4.23"
+    "uglify-js": "^3.6.8"
   },
   "dependencies": {
+    "@abandonware/noble": "^1.9.2-5",
     "bluebird": "^3.3.4",
-    "browser-serialport": "^2.0.2"
+    "browser-serialport": "^2.1.0",
+    "serialport": "^8.0.5"
   }
 }

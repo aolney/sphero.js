@@ -1,6 +1,6 @@
 "use strict";
 
-var ble = require("noble");
+var ble = require("@abandonware/noble");
 
 var Adaptor = lib("adaptors/ble");
 
